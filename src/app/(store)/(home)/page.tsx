@@ -1,6 +1,6 @@
-import { BadgePrice } from '@/app/components/badge-price';
 import { api } from '@/app/data/api';
 import { Product } from '@/app/data/types/product';
+import { BadgePrice } from '@/components/badge-price';
 import Image from 'next/image';
 import Link from 'next/link';
 
