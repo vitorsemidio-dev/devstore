@@ -1,6 +1,6 @@
-import { api } from '@/app/data/api';
-import { Product } from '@/app/data/types/product';
 import { BadgePrice } from '@/components/badge-price';
+import { api } from '@/data/api';
+import { Product } from '@/data/types/product';
 import Image from 'next/image';
 import Link from 'next/link';
 
