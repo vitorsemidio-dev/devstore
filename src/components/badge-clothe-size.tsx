@@ -1,6 +1,6 @@
 type BadgeClotheSizeProps = {
-  size: string;
-};
+  size: string
+}
 
 export function BadgeClotheSize({ size }: BadgeClotheSizeProps) {
   return (
@@ -10,5 +10,5 @@ export function BadgeClotheSize({ size }: BadgeClotheSizeProps) {
     >
       {size}
     </button>
-  );
+  )
 }

@@ -1,3 +1,3 @@
 export type LayoutParams = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}

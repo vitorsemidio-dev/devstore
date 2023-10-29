@@ -1,6 +1,6 @@
 type BadgePriceProps = {
-  price: number;
-};
+  price: number
+}
 
 export function BadgePrice({ price }: BadgePriceProps) {
   return (
@@ -12,5 +12,5 @@ export function BadgePrice({ price }: BadgePriceProps) {
         maximumFractionDigits: 0,
       })}
     </span>
-  );
+  )
 }

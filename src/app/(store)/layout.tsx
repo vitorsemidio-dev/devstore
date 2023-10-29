@@ -1,5 +1,5 @@
-import { LayoutParams } from '@/app/common/layout.type';
-import { Header } from '@/components/header';
+import { LayoutParams } from '@/common/layout.type'
+import { Header } from '@/components/header'
 
 export default function StoreLayout({ children }: LayoutParams) {
   return (
@@ -7,5 +7,5 @@ export default function StoreLayout({ children }: LayoutParams) {
       <Header />
       {children}
     </div>
-  );
+  )
 }

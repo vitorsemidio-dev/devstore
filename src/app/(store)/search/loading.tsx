@@ -1,3 +1,3 @@
 export default function LoadingSearch() {
-  return <p>Carregando busca...</p>;
+  return <p>Carregando busca...</p>
 }

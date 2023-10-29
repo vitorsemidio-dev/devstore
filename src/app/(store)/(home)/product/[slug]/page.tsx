@@ -1,14 +1,14 @@
-import { BadgeClotheSize } from '@/components/badge-clothe-size';
-import Image from 'next/image';
-import { Metadata } from 'next';
+import { BadgeClotheSize } from '@/components/badge-clothe-size'
+import { Metadata } from 'next'
+import Image from 'next/image'
 
-import { api } from '@/data/api';
-import { Product } from '@/data/types/product';
+import { api } from '@/data/api'
+import { Product } from '@/data/types/product'
 
 interface ProductProps {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }
 
 async function getProduct(slug: string): Promise<Product> {
@@ -16,11 +16,11 @@ async function getProduct(slug: string): Promise<Product> {
     next: {
       revalidate: 60 * 60, // 1 hour
     },
-  });
+  })
 
-  const product = await response.json();
+  const product = await response.json()
 
-  return product;
+  return product
 }
 
 export async function generateMetadata({
@@ -33,9 +33,17 @@ export async function generateMetadata({
   }
 }
 
+export async function generateStaticParams() {
+  const response = await api('/products/featured')
+  const products: Product[] = await response.json()
+
+  return products.map((product) => {
+    return { slug: product.slug }
+  })
+}
 
 export default async function ProductPage({ params }: ProductProps) {
-  const product = await getProduct(params.slug);
+  const product = await getProduct(params.slug)
 
   return (
     <div className="relative grid max-h-[860px] grid-cols-3">
@@ -93,5 +101,5 @@ export default async function ProductPage({ params }: ProductProps) {
         </button>
       </div>
     </div>
-  );
+  )
 }
