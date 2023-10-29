@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutParams) {
   return (
     <html className={inter.variable} lang="pt-br">
-      <body>{children}</body>
+      <body className="bg-zinc-950 text-zinc-50 antialiased">{children}</body>
     </html>
   );
 }
